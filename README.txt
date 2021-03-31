@@ -8,7 +8,7 @@ Librairie de fonction en C pour programmer le commodore plus/4 avec le compilate
 =========================
 - La librairie ne peux pas être vendu.
 - L'utilisation de la librairie dans les programmes commerciaux est autorisé.
-- Le Droit auteur : Un petit "Fait avec HappyC64" Ou ce genre de chose est très apréciable. 
+- Le Droit auteur : Un petit "Fait avec HappyTed" Ou ce genre de chose est très apréciable. 
 - Le code source de Happy Ted est présent, vous pouvez le modifier pour votre utilisation et le redistribuer sous les mêmes conditions.
 
 ==============================
