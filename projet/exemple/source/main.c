@@ -44,6 +44,8 @@ unsigned char map[]=
 };
 
 
+
+
 // ======================
 // * La fonction main() *
 // ======================
@@ -74,13 +76,18 @@ void main()
         }
     }
     
+
+load_file("c64,s",(void*)0x1800,8);
+set_text_pointer(0);
+
    SCREEN_ON;
   while(1)
   {
    
     if (get_joystick_2()==J_LEFT)
     {
-        draw_full_character(10, 10,1,0b00001111);
+        cls(0);
+        draw_text(0,0,"Hello World",0b01111110,0);
     }
     
      if (get_joystick_2()==J_RIGHT)
