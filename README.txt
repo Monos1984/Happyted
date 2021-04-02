@@ -14,7 +14,18 @@ Librairie de fonction en C pour programmer le commodore plus/4 avec le compilate
 ==============================
 * Changement de la librairie *
 ==============================
-mise à jour le 31/03/2021
+mise à jour le 2/04/2021
+
+======================
+* Changement 0.0.0.1 *
+======================
+- Ajout du CLS(id_tiles)
+- Ajout de la gestion du joystick 1
+- Chargement et Sauvegarde de fichier sur disquette (ou cassette)
+- Ajout du Wait VBL
+- Ajout du text engine
+- Ajout du wait key
+
 
 ======================
 * Changement 0.0.0.0 *
