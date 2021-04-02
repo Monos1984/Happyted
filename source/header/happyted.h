@@ -24,6 +24,7 @@
   
   void draw_full_character(unsigned char position_x, unsigned char position_y,unsigned char id_character,unsigned char color_id);
   
+  void cls(unsigned char id_tiles);
   // =================
   // * Couleur Ecran *
   // =================
@@ -81,6 +82,32 @@
   
   // ** Active la touche shift
   #define set_shift_on() POKE(0x547,0)
+  
+  
+  void wait_key(unsigned char id_key);
+  void wait_vbl();
+  
+  // ========================
+  // * Gestion de disquette *
+  // ========================
+  unsigned char save_file(unsigned char*name,const void* buffer, unsigned int size,unsigned char device);
+  
+  unsigned int load_file(const char*name, const void* buffer, unsigned char device);
+  
+  unsigned char get_error(void);
+  
+  // ===============
+  // * Text engine *
+  // ===============
+  void set_text_pointer(unsigned char pointer);
+  void draw_text_value_8 (unsigned char px,unsigned char py,unsigned char value,unsigned char color);
+  void draw_text_value_16 (unsigned char px,unsigned char py,  unsigned int value,unsigned char color);
+  void draw_bloc_text(unsigned char px,unsigned char py,unsigned char* text,unsigned char color,unsigned char size_ligne, unsigned char slow_wait_letter);
+  
+  void draw_text(unsigned char px,unsigned char py,unsigned char* text,unsigned char color,unsigned char slow_wait_letter);
+
+  
+  
   
   // ****************************
 	// ** Numeros Touche Clavier **

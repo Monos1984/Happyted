@@ -6,6 +6,17 @@
 // ===================
 #include <happyted.h>
 #include <string.h>
+#include <cbm.h>
+
+
+
+// =======
+// * CLS *
+// =======
+void cls(unsigned char id_tiles)
+{
+  memset((char*)0x0C00,id_tiles,1000); 
+}
 
   // ==========================
   // * set_location_character *
@@ -85,16 +96,6 @@
     POKE(adr_character,id_character);    
   }
   
-  // ==================
-  // * get joystick 2 *
-  // ==================
-  unsigned char get_joystick_2()
-  {
-    POKE(0xFD30,0xFF);// Blocage clavier
-    POKE(0xFF08,0xFD);// Préparation du joystick 2
-    return PEEK(0xFF08);  
-  }
-  
   
   // ========================
   // * set_color_background *
@@ -159,4 +160,12 @@ unsigned char set_bit(unsigned char id_bit, unsigned char value)
 unsigned char unset_bit(unsigned char id_bit, unsigned char value)
 {
     return value = value &(~(1<<id_bit));
+}
+
+// ===================
+// * Attendre le VBL *
+// ===================
+void wait_vbl(void)
+{
+  waitvsync();  
 }
